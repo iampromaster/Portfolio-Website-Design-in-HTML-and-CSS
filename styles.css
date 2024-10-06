@@ -1,0 +1,187 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: #000;
+  background: url(./bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 50px 5%;
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
+
+.logo span {
+  color: #ff0000;
+}
+
+.menu,
+ul,
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+}
+
+ul li::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #f00;
+  border-radius: 10px;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+ul li:hover::before {
+  width: 100%;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+ul li:hover a {
+  color: #f00;
+}
+
+.icons {
+  padding: 0 15px;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.icons a {
+  font-size: 22px;
+  color: #000;
+  transition: 0.5s;
+}
+.icons a:hover {
+  color: #f00;
+}
+.btn {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff0000;
+  outline: none;
+  border: 2px solid #ff0000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.nav-btn {
+  position: relative;
+  background: none;
+  color: #000;
+  overflow: hidden;
+}
+
+.nav-btn:hover {
+  color: #fff;
+}
+
+.nav-btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ff0000;
+  z-index: -1;
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+.nav-btn:hover:before {
+  top: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+}
+
+.content {
+  max-width: 750px;
+  padding: 80px 0 0 5%;
+}
+
+.content h3 {
+  font-size: 40px;
+}
+
+.content h1 {
+  font-size: 100px;
+  line-height: 1.2;
+}
+
+.content h1 span {
+  color: #f00;
+}
+
+.content h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #000;
+  background: linear-gradient(to right,#000 50%,transparent 50% );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-position: 100% 0;
+  transition: 0.5s;
+}
+
+.content h2:hover {
+  background-position: 0 0;
+}
+
+.content .btn {
+  margin-top: 20px;
+}
+
+.content .btn:hover {
+  box-shadow: 5px 5px 25px #ff0000;
+}
